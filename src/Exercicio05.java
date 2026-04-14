@@ -6,24 +6,25 @@ public class Exercicio05 {
         //declaração de variáveis
         Scanner sc = new Scanner(System.in);
 
-        double valorCheio, valorDesconto, valorFinal;
+        double LadoA, LadoB, LadoC;
 
         //entrada de dados
-        System.out.println("Informe o valor total da sua compra: ");
-        valorCheio = sc.nextDouble();
+        System.out.println("Informe o tamanho do lado A: ");
+        LadoA = sc.nextDouble();
+
+        System.out.println("Informe o tamanho do lado B: ");
+        LadoB = sc.nextDouble();
+
+        System.out.println("Informe o tamanho do lado C: ");
+        LadoC = sc.nextDouble();
 
         //processamento de dados
-        if (valorCheio > 1000) {
-            valorDesconto = valorCheio * 15/100;
-        }
-        else {
-            valorDesconto = valorCheio * 8/100;
-        }
-        valorFinal = valorCheio - valorDesconto;
+        if( LadoA < LadoB + LadoC && LadoB < LadoA + LadoC && LadoC < LadoA + LadoB ) {
 
-        //saída de dados
-        System.out.println("O valor Final de sua compra é de R$" + valorFinal);
-        System.out.println("O valor Descontado de sua compra é de R$" + valorDesconto);
-
+            System.out.println("Isso é um Triângulo!");
+        }
+        else{
+            System.out.println("Isso não é um Triângulo :(");
+        }
     }
 }
